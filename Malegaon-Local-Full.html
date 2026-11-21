@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malegaon Local - Bazaar Finder | Ammar Ahmed</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#0C0A14;color:#EDE9FE;overflow-x:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(18,14,28,.92);backdrop-filter:blur(16px);position:sticky;top:0;z-index:10;border-bottom:1px solid #1F2937}
+.logo{font-weight:900;font-size:22px}.logo span{color:#10B981}.live{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:900;box-shadow:0 0 18px rgba(16,185,129,.45)}
+.hero{max-width:1160px;margin:0 auto;padding:54px 22px 18px;text-align:center;position:relative}
+.hero:before{content:'';position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:800px;height:420px;background:radial-gradient(45% 60% at 50% 25%,rgba(16,185,129,.18),rgba(6,182,212,.08),rgba(0,0,0,0));pointer-events:none}
+.hero h1{font-size:52px;line-height:.88;margin:12px 0;font-weight:900;letter-spacing:-1px;color:#fff}.hero h1 span{background:linear-gradient(90deg,#10B981,#06B6D4,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 30px rgba(16,185,129,.3)}
+.hero p{color:#94A3B8;max-width:740px;margin:0 auto;line-height:1.7;font-size:15px}
+.pill{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(16,185,129,.22);padding:8px 14px;border-radius:999px;margin:5px;font-size:13px;font-weight:700;color:#6EE7B7}
+.wrap{max-width:1160px;margin:0 auto;padding:16px 22px 44px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(16,185,129,.14);border-radius:22px;padding:22px;margin:16px 0;box-shadow:0 12px 32px rgba(0,0,0,.45),0 0 0 1px rgba(16,185,129,.06) inset;backdrop-filter:blur(12px)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tab{border:1px solid rgba(16,185,129,.22);background:rgba(255,255,255,.04);padding:11px 18px;border-radius:999px;cursor:pointer;font-weight:800;font-size:13px;color:#94A3B8;transition:.25s}.tab:hover{box-shadow:0 0 16px rgba(16,185,129,.22);color:#fff}.tab.active{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;border-color:#10B981;box-shadow:0 0 20px rgba(16,185,129,.45)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shop{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px;transition:.2s}.shop:hover{transform:translateY(-2px);border-color:rgba(16,185,129,.22);box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.shop b{color:#fff;font-size:16px}.shop p{color:#94A3B8;font-size:13px;margin:6px 0;line-height:1.5}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{padding:9px 14px;border-radius:999px;font-weight:800;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block}.btn.call{background:#10B981;color:#fff}.btn.wa{background:#25D366;color:#fff}.btn.map{background:rgba(255,255,255,.08);color:#EDE9FE;border:1px solid rgba(255,255,255,.1)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+input,select{padding:12px 16px;border:1px solid rgba(16,185,129,.22);border-radius:12px;background:rgba(0,0,0,.35);color:#EDE9FE;font-size:14px}
+.chip{display:inline-block;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin:5px;cursor:pointer;font-weight:700;font-size:13px;color:#94A3B8}.chip.on{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;border-color:#10B981;box-shadow:0 0 14px rgba(16,185,129,.35)}
+.bar{height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#10B981,#06B6D4)}
+.small{color:#94A3B8;font-size:13px;line-height:1.6}
+@media(max-width:780px){.hero h1{font-size:34px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="nav"><div class="logo">📍 Malegaon <span>Local</span> <span style="font-size:12px;color:#64748B;font-weight:600">• Bazaar Finder • Ammar Ahmed</span></div><div class="live">● DARK PREMIUM • NEW</div></div>
+<div class="hero"><div class="pill">✦ Malegaon ka apna Justdial • First Time</div><h1>Malegaon ka<br><span>Apna Bazaar App</span></h1><p><b>1,2,3 pe focus:</b> Kirana • Medical • Mobile Repair — Direct Call + WhatsApp + Location — 100% offline + Firebase — Dark Premium Theme — Abhi trending aur zarurat wala project.</p><div><span class="pill">🛒 Kirana</span><span class="pill">💊 Medical</span><span class="pill">📱 Mobile Repair</span><span class="pill">🌙 Dark Premium</span></div></div>
+<div class="wrap">
+<div class="card">
+<div class="tabs"><button class="tab active" data-tab="shops" type="button">🏪 Shops — Live Demo</button><button class="tab" data-tab="add" type="button">➕ Add Business</button><button class="tab" data-tab="tech" type="button">💻 Tech + Earning</button></div>
+
+<div id="panel-shops" style="display:block">
+<h3 style="margin:0;color:#fff">🏪 Malegaon Shops — Live Demo (1,2,3 Focus)</h3><p class="small">Search karo — Filter karo — Call/WhatsApp/Map — same logic as Android app.</p>
+<div class="controls"><input id="search" placeholder="Search shop e.g. Altaf, Medical, Mobile" style="flex:1;min-width:220px"><select id="catFilter"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option><option>Coaching</option></select></div>
+<div id="chips"><span class="chip on" onclick="filterCat('All',this)">All</span><span class="chip" onclick="filterCat('Kirana',this)">🛒 Kirana</span><span class="chip" onclick="filterCat('Medical',this)">💊 Medical</span><span class="chip" onclick="filterCat('Mobile Repair',this)">📱 Mobile Repair</span></div>
+<div class="grid" id="shopList" style="margin-top:14px"></div>
+</div>
+
+<div id="panel-add" style="display:none">
+<h3 style="margin:0;color:#fff">➕ Add Business — Dukaan Wala Khud Add Karega</h3><p class="small">Option A + B dono: Tu shuru me 20-30 add karega, phir dukaan wale khud add karenge.</p>
+<div class="controls"><input id="bName" placeholder="Shop Name"><input id="bCat" placeholder="Category: Kirana/Medical/Mobile Repair"><input id="bPhone" placeholder="Phone"><input id="bArea" placeholder="Area e.g. Mushaira Chowk"></div>
+<div class="controls"><button class="btn call" onclick="addBusiness()" type="button">➕ Add Shop (Demo)</button></div>
+<div class="card" style="background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.22)"><b style="color:#6EE7B7">How Firebase Works?</b><p class="small">Android me: Firebase Firestore me document add hoga — name, category, phone, area, lat/lng, rating. Offline Room me bhi save — bina internet ke bhi list dikhegi. Dukaan wale login karke edit kar sakte hai.</p></div>
+</div>
+
+<div id="panel-tech" style="display:none">
+<h3 style="margin:0;color:#fff">💻 Tech + Earning — Professional</h3>
+<div class="grid" style="margin-top:12px">
+<div class="shop"><b>📱 Kotlin + XML</b><p>Android app — same as Expense Tracker & Todo — 58% Kotlin, 18% Java, 16% XML.</p><div class="bar" style="margin-top:8px"><i style="width:58%"></i></div></div>
+<div class="shop"><b>🔥 Firebase</b><p>Firestore — shops collection — free — real time — shop add/edit/delete.</p></div>
+<div class="shop"><b>🗄️ Room + Offline</b><p>Room DB — bina internet ke bhi Malegaon shops dikhenge.</p></div>
+<div class="shop"><b>📍 Maps + Call + WhatsApp</b><p>Intent.ACTION_VIEW for map, ACTION_DIAL for call, WhatsApp API.</p></div>
+<div class="shop"><b>💰 Earning Plan</b><p>Phase 1: Free — 20 shops. Phase 2: Premium Listing ₹199/month — top pe dikhega + Verified badge.</p></div>
+<div class="shop"><b>🌙 Dark Premium CSS</b><p>Same as Todo — #0C0A14 bg, #10B981 neon, blur, glass cards, high visibility black/purple buttons.</p></div>
+</div>
+</div>
+
+</div>
+<div class="card"><h3 style="margin:0;color:#fff">🚀 Next Steps — Build Karenge</h3><p class="small">1. Ye showcase website ko GitHub pe daal de — repo: Malegaon-Local<br>2. Android Studio project banaunga — 3 tabs: Home (Shops), Search, Add Business<br>3. Firebase connect — 20 dummy shops add<br>4. APK build — GitHub Release</p></div>
+</div>
+<script>
+var shops=[
+{name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk, Malegaon",phone:"9876543210",rating:"4.5"},
+{name:"Al-Shifa Medical",cat:"Medical",area:"Kidwai Road",phone:"9876543211",rating:"4.7"},
+{name:"Mobile World Repair",cat:"Mobile Repair",area:"Qidwai Road",phone:"9876543212",rating:"4.6"},
+{name:"New Bharat Kirana",cat:"Kirana",area:"Islam Pura",phone:"9876543213",rating:"4.3"},
+{name:"City Medical & General",cat:"Medical",area:"Azad Chowk",phone:"9876543214",rating:"4.8"},
+{name:"Smart Mobile Care",cat:"Mobile Repair",area:"Satana Naka",phone:"9876543215",rating:"4.4"},
+{name:"Farooq Electrician",cat:"Electrician",area:"Malegaon",phone:"9876543216",rating:"4.2"},
+{name:"Quick Plumber Service",cat:"Plumber",area:"Malegaon",phone:"9876543217",rating:"4.1"}
+];
+var curCat='All';
+function render(){var q=document.getElementById('search').value.toLowerCase();var catSel=document.getElementById('catFilter').value;var list=document.getElementById('shopList');var filtered=shops.filter(function(s){var matchQ=!q||s.name.toLowerCase().includes(q)||s.area.toLowerCase().includes(q);var matchCat=curCat==='All'?true:s.cat===curCat;var matchSel=catSel==='All'?true:s.cat===catSel;return matchQ&&matchCat&&matchSel});if(!filtered.length){list.innerHTML='<p class="small">No shops found.</p>';return}list.innerHTML=filtered.map(function(s){return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+'</b><p>📂 '+s.cat+' • 📍 '+s.area+' • 📞 '+s.phone+'</p><div class="btns"><a class="btn call" href="tel:'+s.phone+'">📞 Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">💬 WhatsApp</a><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">📍 Map</a></div></div>'}).join('')}
+function filterCat(c,el){curCat=c;document.querySelectorAll('#chips .chip').forEach(function(ch){ch.classList.remove('on')});if(el)el.classList.add('on');render()}
+function addBusiness(){var n=document.getElementById('bName').value.trim();var cat=document.getElementById('bCat').value.trim()||'Kirana';var ph=document.getElementById('bPhone').value.trim()||'9876543210';var area=document.getElementById('bArea').value.trim()||'Malegaon';if(!n){alert('Shop name daalo');return}shops.unshift({name:n,cat:cat,area:area,phone:ph,rating:"5.0 New"});document.getElementById('bName').value='';document.getElementById('bCat').value='';document.getElementById('bPhone').value='';document.getElementById('bArea').value='';curCat='All';document.getElementById('catFilter').value='All';document.querySelectorAll('#chips .chip').forEach(function(ch){ch.classList.remove('on')});document.querySelectorAll('#chips .chip')[0].classList.add('on');render();alert('Shop added (demo) — Firebase me bhi add hoga Android me');}
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('catFilter').addEventListener('change',render);
+window.switchTab=function(tab){document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-tab')===tab)});document.querySelectorAll('[id^="panel-"]').forEach(function(el){el.style.display=(el.id==='panel-'+tab)?'block':'none'})};
+document.querySelectorAll('.tab').forEach(function(btn){btn.addEventListener('click',function(){var t=btn.getAttribute('data-tab');if(t)window.switchTab(t)})});
+render();
+</script>
+</body>
+</html>
