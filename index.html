@@ -1,215 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Malegaon Local - FINAL</title>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malegaon Local - iOS Glass Transparent</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui;background:#0A0A0C;color:#fff;padding-bottom:80px}
-body.light{background:#F2F2F7;color:#1C1C1E}
-body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(600px 400px at 10% 10%,#FF375F,transparent 60%),radial-gradient(600px 400px at 90% 10%,#FF9F0A,transparent 60%),radial-gradient(700px 500px at 50% 50%,#5856D6,transparent 65%),radial-gradient(600px 400px at 10% 90%,#30D158,transparent 60%),radial-gradient(600px 400px at 90% 90%,#0A84FF,transparent 60%),linear-gradient(135deg,#1C1C1E,#0A0A0C);pointer-events:none}
-body.light::before{background:radial-gradient(600px 400px at 10% 10%,#FF9F0A,transparent 60%),radial-gradient(600px 400px at 90% 10%,#FF375F,transparent 60%),radial-gradient(700px 500px at 50% 50%,#64D2FF,transparent 65%),linear-gradient(135deg,#FFE8CC,#FFF2F2)}
-.nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(255,255,255,.10);backdrop-filter:blur(25px);border-bottom:1px solid rgba(255,255,255,.2)}
-body.light .nav{background:rgba(255,255,255,.35);border-color:rgba(255,255,255,.6)}
-.logo{font-weight:800;font-size:22px}
-.hero{position:relative;z-index:1;text-align:center;padding:24px 16px 0}
-.hero h1{font-size:38px;line-height:1.1;margin:8px 0;font-weight:800}
-.wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:14px 16px}
-.card{background:rgba(255,255,255,.16);backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:18px;margin:12px 0}
-body.light .card{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.7)}
+body{margin:0;font-family:-apple-system,Inter,system-ui;background:linear-gradient(135deg,#E0F2FE 0%,#22D3EE 100%);min-height:100vh;color:#1D1D1F}
+.bg{position:fixed;inset:0;z-index:0;background:
+radial-gradient(600px 400px at 20% 20%,rgba(34,211,238,.6),transparent),
+radial-gradient(800px 500px at 80% 30%,rgba(186,230,253,.5),transparent),
+radial-gradient(600px 600px at 50% 80%,rgba(6,182,212,.4),transparent),
+linear-gradient(135deg,#22D3EE 0%,#06B6D4 100%);
+filter:saturate(1.2)}
+.nav{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;margin:14px; border-radius:20px;background:rgba(255,255,255,.25);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 32px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.6)}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.3px}.logo span{background:linear-gradient(90deg,#06B6D4,#0EA5E9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge{font-size:10px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.4);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.5);font-weight:800;letter-spacing:.5px}
+.hero{position:relative;z-index:10;max-width:1160px;margin:0 auto;padding:10px 24px}
+.hero h1{font-size:42px;line-height:.95;margin:10px 0;font-weight:800;letter-spacing:-1.5px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.15)}.hero h1 span{color:#fff;opacity:.9}
+.hero p{color:rgba(255,255,255,.85);font-weight:500;line-height:1.6;text-shadow:0 1px 10px rgba(0,0,0,.1)}
+.wrap{position:relative;z-index:10;max-width:1160px;margin:0 auto;padding:0 18px 40px}
+.glass{background:rgba(255,255,255,.22);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,.4);border-radius:24px;padding:20px;box-shadow:0 8px 32px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.6);margin:16px 0}
+.glass-dark{background:rgba(255,255,255,.15);backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);border:1px solid rgba(255,255,255,.3);border-radius:20px}
 .tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;padding:11px 18px;border-radius:999px;font-weight:700;cursor:pointer}
-body.light .tab{background:rgba(255,255,255,.5);color:#1C1C1E}
-.tab.active{background:#fff;color:#000}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.shop{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:14px}
-body.light .shop{background:rgba(255,255,255,.55)}
-.shop b{font-size:15.5px;font-weight:700}
-.shop p{font-size:13.5px;font-weight:500;opacity:.92;margin:6px 0}
-.btn{padding:10px 15px;border-radius:999px;font-weight:700;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block}
-.btn.call{background:#fff;color:#000}.btn.wa{background:#30D158;color:#fff}.btn.map{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25)}
-body.light .btn.map{background:rgba(255,255,255,.6);color:#1C1C1E}
-.btn.fav{background:#FF9F0A;color:#fff}
-input,select{padding:12px 14px;border:1px solid rgba(255,255,255,.25);border-radius:13px;background:rgba(255,255,255,.12);color:#fff;font-size:14px;flex:1;min-width:140px}
-body.light input,body.light select{background:rgba(255,255,255,.6);color:#1C1C1E}
+.tab{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.25);backdrop-filter:blur(10px);padding:10px 18px;border-radius:999px;cursor:pointer;font-weight:700;color:#1D1D1F;transition:.2s;box-shadow:0 2px 10px rgba(0,0,0,.05)}.tab:hover{background:rgba(255,255,255,.4)}.tab.active{background:rgba(0,0,0,.85);color:#fff;border-color:rgba(0,0,0,.85);box-shadow:0 4px 20px rgba(0,0,0,.2)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-.chip{padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:700;cursor:pointer}
-body.light .chip{background:rgba(255,255,255,.5);color:#1C1C1E}
-.chip.on{background:#fff;color:#000}
-.small{font-size:13px;opacity:.92;font-weight:500;line-height:1.6}
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;display:none;z-index:99;border:1px solid rgba(255,255,255,.3)}
-.bottombar{position:fixed;bottom:0;left:0;right:0;z-index:30;display:flex;justify-content:space-around;padding:10px;background:rgba(255,255,255,.12);backdrop-filter:blur(30px);border-top:1px solid rgba(255,255,255,.25)}
-body.light .bottombar{background:rgba(255,255,255,.5)}
-.bottombar button{border:0;background:transparent;color:#fff;font-size:11px;font-weight:600;cursor:pointer;padding:6px 12px;border-radius:10px}
-body.light .bottombar button{color:#1C1C1E}
-.bottombar button.active{color:#fff;background:rgba(0,0,0,.3)}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}}
+input,select{padding:13px 16px;border:1px solid rgba(255,255,255,.5);border-radius:14px;background:rgba(255,255,255,.35);backdrop-filter:blur(10px);color:#1D1D1F;font-size:14px;font-weight:600;flex:1;min-width:160px;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}.input-label{font-size:11px;font-weight:800;color:rgba(0,0,0,.6);margin-bottom:6px;letter-spacing:.5px;display:block;text-transform:uppercase}
+input:focus,select:focus{border-color:rgba(0,0,0,.3);background:rgba(255,255,255,.5);box-shadow:0 0 0 3px rgba(255,255,255,.3),inset 0 1px 0 rgba(255,255,255,.8)}
+input::placeholder{color:rgba(0,0,0,.4)}
+.chip{padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.3);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.45);margin:4px;cursor:pointer;font-weight:700;color:#1D1D1F;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:.2s}.chip.on{background:#1D1D1F;color:#fff;border-color:#1D1D1F;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shop{background:rgba(255,255,255,.35);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.5);border-radius:18px;padding:16px;transition:.25s;box-shadow:0 4px 20px rgba(0,0,0,.08),inset 0 1px 0 rgba(255,255,255,.7)}.shop:hover{transform:translateY(-2px);background:rgba(255,255,255,.45);box-shadow:0 12px 32px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.8)}
+.shop b{font-size:15px;font-weight:800;color:#1D1D1F}.shop p{color:rgba(0,0,0,.6);font-size:13px;margin:6px 0;font-weight:500}
+.btn{padding:10px 16px;border-radius:999px;font-weight:700;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block;backdrop-filter:blur(10px);transition:.2s;box-shadow:0 2px 10px rgba(0,0,0,.08)}.btn.call{background:rgba(0,0,0,.9);color:#fff}.btn.wa{background:rgba(255,255,255,.6);color:#1D1D1F;border:1px solid rgba(255,255,255,.6)}.btn.map{background:rgba(255,255,255,.4);color:#1D1D1F;border:1px solid rgba(255,255,255,.4)}.btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.small{color:rgba(0,0,0,.6);font-size:13px;font-weight:500;line-height:1.6}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.85);backdrop-filter:blur(20px);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;display:none;z-index:99;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
 </style>
 </head>
 <body>
-<div class="nav"><div class="logo">📍 Malegaon Local</div><button onclick="toggleTheme()" style="padding:9px 14px;border-radius:999px;border:0;font-weight:800;cursor:pointer;background:#fff;color:#000">🌙 / ☀️ Theme</button></div>
-<div class="hero"><h1>Malegaon Local<br>Bazaar Finder</h1><p class="small">FINAL - iOS Glass Transparent - Dark Slight Bold</p><p class="small" id="totalCount">Total: 6</p></div>
+<div class="bg"></div>
+<div class="nav"><div class="logo">📍 Malegaon <span>Local</span></div><div class="badge">💧 AQUA BLUE GLASS • #22D3EE • iOS</div></div>
+<div class="hero"><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p>Seafoam Glass — Fully Transparent — Blur 30px + Saturate 180% — Seafoam #A7F3D0 + #6EE7B7 + #06B6D4 — iOS Glass with Seafoam Colors.</p><p class="small" id="totalCount" style="color:rgba(255,255,255,.9)">Total Shops: 8</p></div>
 <div class="wrap">
-<div class="card">
-<div class="tabs">
-<button class="tab active" id="tab1" onclick="showTab('shops')">🏪 Shops</button>
-<button class="tab" id="tab2" onclick="showTab('add')">➕ Add Business</button>
-<button class="tab" id="tab3" onclick="showTab('tech')">💻 Technology</button>
-</div>
-
-<div id="panelShops" style="margin-top:14px">
-<div class="controls"><input id="searchBox" placeholder="Search - type Altaf" oninput="doRender()"><select id="catBox" onchange="doRender()"><option value="All">All Categories</option><option value="Kirana">Kirana</option><option value="Medical">Medical</option><option value="Mobile Repair">Mobile Repair</option></select><select id="sortBox" onchange="doRender()"><option value="default">Sort: Default</option><option value="rating">Sort: Highest Rating</option><option value="name">Sort: A to Z</option></select></div>
-<div><button class="chip on" onclick="setCat('All',this)">All</button><button class="chip" onclick="setCat('Kirana',this)">Kirana</button><button class="chip" onclick="setCat('Medical',this)">Medical</button><button class="chip" onclick="setCat('Mobile Repair',this)">Mobile Repair</button><button class="chip" id="favBtn" onclick="toggleFavFilter()">❤️ Favourites: OFF</button></div>
-<div class="controls"><button class="btn call" onclick="shareApp()">📤 Share</button><button class="btn map" onclick="exportShops()">📥 Export</button></div>
+<div class="glass">
+<div class="tabs"><button class="tab active" id="tabShops" type="button">🏪 Shops</button><button class="tab" id="tabBusiness" type="button">➕ Add Business</button><button class="tab" id="tabTech" type="button">💻 Technology</button></div>
+<div id="panel-shops" style="margin-top:14px">
+<h3 style="margin:0;font-weight:800">Shops — iOS Glass Cards</h3><p class="small">Transparent glass — blur effect — background visible through cards.</p>
+<div class="controls"><input id="searchInput" placeholder="Search shop or area"><select id="catSelect"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option></select></div>
+<div id="chipBox"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button></div>
 <div class="grid" id="shopList" style="margin-top:12px"></div>
 </div>
-
-<div id="panelAdd" style="display:none;margin-top:14px">
-<h3 style="margin:0">Add Business</h3><p class="small">Naam bharo aur ADD BUSINESS dabao</p>
-<div class="controls"><input id="bName" placeholder="Business Name *"><input id="bCat" placeholder="Category"></div>
-<div class="controls"><input id="bPhone" placeholder="Phone"><input id="bArea" placeholder="Area"></div>
-<div class="controls"><button class="btn call" onclick="addShop()" style="padding:14px 28px;font-size:15px">➕ ADD BUSINESS - CLICK HERE</button></div>
-<p class="small" id="addStatus"></p>
+<div id="panel-business" style="display:none;margin-top:14px">
+<h3 style="margin:0;font-weight:800">Add Business — Glass Form</h3><p class="small">Transparent inputs — blur — see through.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+<div><label class="input-label">Business Name *</label><input id="bName" placeholder="e.g. Altaf Kirana Store" style="width:100%"></div>
+<div><label class="input-label">Category *</label><select id="bCat" style="width:100%"><option value="">Select Category</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option></select></div>
+<div><label class="input-label">Phone Number *</label><input id="bPhone" placeholder="e.g. 9876543210" style="width:100%"></div>
+<div><label class="input-label">Area / Location *</label><input id="bArea" placeholder="e.g. Mushaira Chowk, Malegaon" style="width:100%"></div>
 </div>
-
-<div id="panelTech" style="display:none;margin-top:14px">
-<h3 style="margin:0">Technology</h3><p class="small">HTML / CSS / JS • iOS Glass Transparent • Dark Slight Bold<br>Firebase ready - LocalStorage save ho raha hai</p>
+<div class="controls" style="margin-top:18px"><button class="btn call" id="addBtn" type="button" style="padding:13px 26px">➕ Add Business</button><span id="addMsg" style="font-size:13px;font-weight:700;margin-left:10px;color:#1D1D1F"></span></div>
 </div>
+<div id="panel-tech" style="display:none;margin-top:14px"><h3 style="margin:0;font-weight:800">iOS Glass Technology</h3><p class="small">This is TRUE iOS Glass: <br>• background: rgba(255,255,255,.25) — 25% transparent — see through<br>• backdrop-filter: blur(30px) saturate(180%) — iOS liquid blur<br>• border: 1px solid rgba(255,255,255,.4) — glass edge<br>• box-shadow: inset 0 1px 0 rgba(255,255,255,.6) — top highlight<br>• Colors: Gradient background visible through everything</p></div>
 </div>
-</div>
-
-<div class="bottombar">
-<button id="bb1" class="active" onclick="showTab('shops')">🏪<br>Shops</button>
-<button id="bb2" onclick="showTab('add')">➕<br>Add</button>
-<button id="bb3" onclick="showTab('tech')">💻<br>Tech</button>
-<button onclick="toggleTheme()">🌙<br>Theme</button>
 </div>
 <div class="toast" id="toast">Done</div>
-
 <script>
-var shops = [
-{name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk",phone:"9876543210",rating:"4.5"},
+(function(){
+var shops=[
+{name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk, Malegaon",phone:"9876543210",rating:"4.5"},
 {name:"Al-Shifa Medical",cat:"Medical",area:"Kidwai Road",phone:"9876543211",rating:"4.7"},
 {name:"Mobile World Repair",cat:"Mobile Repair",area:"Qidwai Road",phone:"9876543212",rating:"4.6"},
 {name:"New Bharat Kirana",cat:"Kirana",area:"Islam Pura",phone:"9876543213",rating:"4.3"},
-{name:"City Medical",cat:"Medical",area:"Azad Chowk",phone:"9876543214",rating:"4.8"},
-{name:"Smart Mobile Care",cat:"Mobile Repair",area:"Satana Naka",phone:"9876543215",rating:"4.4"}
+{name:"City Medical & General",cat:"Medical",area:"Azad Chowk",phone:"9876543214",rating:"4.8"},
+{name:"Smart Mobile Care",cat:"Mobile Repair",area:"Satana Naka",phone:"9876543215",rating:"4.4"},
+{name:"Farooq Electrician",cat:"Electrician",area:"Malegaon",phone:"9876543216",rating:"4.2"},
+{name:"Quick Plumber Service",cat:"Plumber",area:"Malegaon",phone:"9876543217",rating:"4.1"}
 ];
-var curCat = "All";
-var favOnly = false;
-var favs = [];
-try{ var s = localStorage.getItem("ml_shops"); if(s){ var p = JSON.parse(s); if(p.length>0) shops = p; } var f = localStorage.getItem("ml_favs"); if(f) favs = JSON.parse(f); var t = localStorage.getItem("ml_theme"); if(t==="light") document.body.classList.add("light"); }catch(e){}
-
-function toast(msg){ var el = document.getElementById("toast"); el.textContent = msg; el.style.display = "block"; setTimeout(function(){ el.style.display = "none"; }, 2500); }
-function save(){ try{ localStorage.setItem("ml_shops", JSON.stringify(shops)); localStorage.setItem("ml_favs", JSON.stringify(favs)); }catch(e){} }
-function showTab(which){
-  document.getElementById("tab1").className = "tab" + (which==="shops" ? " active" : "");
-  document.getElementById("tab2").className = "tab" + (which==="add" ? " active" : "");
-  document.getElementById("tab3").className = "tab" + (which==="tech" ? " active" : "");
-  document.getElementById("panelShops").style.display = which==="shops" ? "block" : "none";
-  document.getElementById("panelAdd").style.display = which==="add" ? "block" : "none";
-  document.getElementById("panelTech").style.display = which==="tech" ? "block" : "none";
-  document.getElementById("bb1").className = which==="shops" ? "active" : "";
-  document.getElementById("bb2").className = which==="add" ? "active" : "";
-  document.getElementById("bb3").className = which==="tech" ? "active" : "";
+var curCat="All";
+function toast(m){var t=document.getElementById("toast");t.textContent=m;t.style.display="block";setTimeout(function(){t.style.display="none"},2500)}
+function render(){
+ var q=document.getElementById("searchInput").value.toLowerCase();
+ var sel=document.getElementById("catSelect").value;
+ var list=document.getElementById("shopList");
+ var f=shops.filter(function(s){return (!q||s.name.toLowerCase().indexOf(q)!==-1||s.area.toLowerCase().indexOf(q)!==-1)&&(curCat==="All"||s.cat===curCat)&&(sel==="All"||s.cat===sel);});
+ document.getElementById("totalCount").textContent="Total Shops: "+shops.length+" | Showing: "+f.length;
+ if(!f.length){list.innerHTML="<p class='small'>No shops found.</p>";return;}
+ list.innerHTML=f.map(function(s){return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+'</b><p>'+s.cat+' • '+s.area+' • '+s.phone+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:'+s.phone+'">Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">WhatsApp</a><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">Map</a></div></div>'}).join('');
 }
-function setCat(c, btn){
-  curCat = c;
-  var chips = document.querySelectorAll(".chip");
-  for(var i=0;i<chips.length;i++){ if(chips[i].id!=="favBtn") chips[i].classList.remove("on"); }
-  btn.classList.add("on");
-  doRender();
+function switchTab(t){
+ document.getElementById("tabShops").classList.toggle("active",t==="shops");
+ document.getElementById("tabBusiness").classList.toggle("active",t==="business");
+ document.getElementById("tabTech").classList.toggle("active",t==="tech");
+ document.getElementById("panel-shops").style.display=t==="shops"?"block":"none";
+ document.getElementById("panel-business").style.display=t==="business"?"block":"none";
+ document.getElementById("panel-tech").style.display=t==="tech"?"block":"none";
 }
-function toggleFavFilter(){
-  favOnly = !favOnly;
-  document.getElementById("favBtn").textContent = favOnly ? "❤️ Favourites: ON" : "❤️ Favourites: OFF";
-  doRender();
-}
-function toggleTheme(){
-  var isLight = document.body.classList.toggle("light");
-  try{ localStorage.setItem("ml_theme", isLight ? "light" : "dark"); }catch(e){}
-  toast(isLight ? "Light Mode ON" : "Dark Mode ON");
-}
-function toggleFav(name){
-  var idx = favs.indexOf(name);
-  if(idx===-1){ favs.push(name); toast("Added to Favourites: " + name); }
-  else { favs.splice(idx,1); toast("Removed: " + name); }
-  save(); doRender();
-}
-function addShop(){
-  var name = document.getElementById("bName").value.trim();
-  var cat = document.getElementById("bCat").value.trim() || "Kirana";
-  var phone = document.getElementById("bPhone").value.trim() || "9876543210";
-  var area = document.getElementById("bArea").value.trim() || "Malegaon";
-  var st = document.getElementById("addStatus");
-  if(!name){ st.textContent = "Error: Please enter Business Name"; st.style.color = "red"; toast("Please enter Business Name"); return; }
-  shops.unshift({name:name, cat:cat, area:area, phone:phone, rating:"5.0"});
-  document.getElementById("bName").value=""; document.getElementById("bCat").value=""; document.getElementById("bPhone").value=""; document.getElementById("bArea").value="";
-  document.getElementById("searchBox").value=""; document.getElementById("catBox").value="All"; curCat="All";
-  st.textContent = "Success: " + name + " added!"; st.style.color = "#30D158";
-  save(); doRender(); toast("Shop Added: " + name);
-  setTimeout(function(){ showTab("shops"); }, 700);
-}
-function shareApp(){
-  if(navigator.share){ navigator.share({title:"Malegaon Local", text:"Malegaon Local - Bazaar Finder", url:location.href}); }
-  else { try{ navigator.clipboard.writeText(location.href); toast("Link Copied!"); }catch(e){ toast(location.href); } }
-}
-function exportShops(){
-  var blob = new Blob([JSON.stringify(shops,null,2)], {type:"application/json"});
-  var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "malegaon-shops.json"; a.click();
-  toast("Exported " + shops.length + " shops");
-}
-function doRender(){
-  var q = document.getElementById("searchBox").value.toLowerCase();
-  var sel = document.getElementById("catBox").value;
-  var sort = document.getElementById("sortBox").value;
-  var list = document.getElementById("shopList");
-  var out = [];
-  for(var i=0;i<shops.length;i++){
-    var s = shops[i];
-    if(q && s.name.toLowerCase().indexOf(q)===-1 && s.area.toLowerCase().indexOf(q)===-1) continue;
-    if(curCat!=="All" && s.cat!==curCat) continue;
-    if(sel!=="All" && s.cat!==sel) continue;
-    if(favOnly && favs.indexOf(s.name)===-1) continue;
-    out.push(s);
-  }
-  if(sort==="rating") out.sort(function(a,b){ return parseFloat(b.rating)-parseFloat(a.rating); });
-  if(sort==="name") out.sort(function(a,b){ return a.name.localeCompare(b.name); });
-  document.getElementById("totalCount").textContent = "Total: " + shops.length + " | Showing: " + out.length;
-  if(out.length===0){ list.innerHTML = "<p class='small'>No shops found.</p>"; return; }
-  var h = "";
-  for(var j=0;j<out.length;j++){
-    var sh = out[j];
-    var isFav = favs.indexOf(sh.name)!==-1;
-    var badge = parseFloat(sh.rating)>=4.6 ? " <span style='background:#FFD700;color:#000;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:900'>PREMIUM</span>" : " <span style='background:rgba(0,255,163,.2);color:#fff;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:800'>VERIFIED</span>";
-    h += '<div class="shop"><b>' + sh.name + ' ⭐ ' + sh.rating + badge + '</b><p>' + sh.cat + ' • ' + sh.area + ' • ' + sh.phone + '</p>';
-    h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:' + sh.phone + '">Call</a><a class="btn wa" href="https://wa.me/91' + sh.phone + '" target="_blank">WhatsApp</a><button class="btn fav" onclick="toggleFav(\'' + sh.name.replace(/\'/g,"") + '\')">' + (isFav ? "❤️ Favourited" : "🤍 Favourite") + '</button></div></div>';
-  }
-  list.innerHTML = h;
-}
-doRender();
+document.getElementById("tabShops").addEventListener("click",function(){switchTab("shops")});
+document.getElementById("tabBusiness").addEventListener("click",function(){switchTab("business")});
+document.getElementById("tabTech").addEventListener("click",function(){switchTab("tech")});
+document.getElementById("searchInput").addEventListener("input",render);
+document.getElementById("catSelect").addEventListener("change",render);
+document.querySelectorAll("#chipBox .chip").forEach(function(ch){ch.addEventListener("click",function(){curCat=ch.getAttribute("data-cat");document.querySelectorAll("#chipBox .chip").forEach(function(c){c.classList.remove("on")});ch.classList.add("on");render();})});
+document.getElementById("addBtn").addEventListener("click",function(){
+ var name=document.getElementById("bName").value.trim();
+ var cat=document.getElementById("bCat").value.trim();
+ var phone=document.getElementById("bPhone").value.trim()||"9876543210";
+ var area=document.getElementById("bArea").value.trim()||"Malegaon";
+ if(!name||!cat){document.getElementById("addMsg").textContent="Enter Name & Category";toast("Enter Name & Category");return;}
+ shops.unshift({name:name,cat:cat,area:area,phone:phone,rating:"5.0"});
+ document.getElementById("bName").value="";document.getElementById("bCat").value="";document.getElementById("bPhone").value="";document.getElementById("bArea").value="";
+ document.getElementById("addMsg").textContent="Added: "+name;render();toast("Shop Added: "+name);setTimeout(function(){switchTab("shops")},700);
+});
+render();
+})();
 </script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</body>
 </html>
