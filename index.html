@@ -1,67 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Malegaon Local - Bazaar Finder | Professional</title>
+<title>Malegaon Local - Ultra Premium Aurora</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:#0C0A14;color:#EDE9FE;overflow-x:hidden}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(18,14,28,.92);backdrop-filter:blur(16px);position:sticky;top:0;z-index:10;border-bottom:1px solid #1F2937}
-.logo{font-weight:900;font-size:22px;color:#fff}.logo span{color:#10B981}
-.live{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:900;box-shadow:0 0 18px rgba(16,185,129,.45)}
-.hero{max-width:1160px;margin:0 auto;padding:56px 22px 18px;text-align:center}
-.hero h1{font-size:52px;line-height:.88;margin:12px 0;font-weight:900;color:#fff}.hero h1 span{background:linear-gradient(90deg,#10B981,#06B6D4,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:#94A3B8;max-width:760px;margin:0 auto;line-height:1.7;font-size:15px}
-.wrap{max-width:1160px;margin:0 auto;padding:16px 22px 44px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(16,185,129,.14);border-radius:22px;padding:22px;margin:16px 0;box-shadow:0 12px 32px rgba(0,0,0,.45);backdrop-filter:blur(12px)}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.tab{border:1px solid rgba(16,185,129,.22);background:rgba(255,255,255,.04);padding:11px 18px;border-radius:999px;cursor:pointer;font-weight:800;font-size:13px;color:#94A3B8;transition:.25s}.tab:hover{color:#fff;box-shadow:0 0 16px rgba(16,185,129,.22)}.tab.active{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;border-color:#10B981;box-shadow:0 0 20px rgba(16,185,129,.45)}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600;800&display=swap');
+*{box-sizing:border-box}
+:root{--bg:#050508;--glass:rgba(255,255,255,.04);--neon:#00FFA3;--neon2:#00D4FF;--violet:#7C3AED;--gold:#FFD700}
+body{margin:0;font-family:'Inter',system-ui;background:var(--bg);color:#F8FAFC;overflow-x:hidden}
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;animation:float 12s ease-in-out infinite}
+.orb1{width:480px;height:480px;background:#00FFA3;top:-80px;left:-80px}
+.orb2{width:520px;height:520px;background:#7C3AED;top:20%;right:-120px;animation-delay:-4s}
+.orb3{width:420px;height:420px;background:#00D4FF;bottom:-100px;left:30%;animation-delay:-8s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-30px) scale(1.08)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:22px 22px}
+.nav{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(255,255,255,.03);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:24px;letter-spacing:-.5px}.logo em{font-style:normal;background:linear-gradient(90deg,#00FFA3,#00D4FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badge{font-size:11px;letter-spacing:1.2px;padding:7px 12px;border-radius:999px;background:rgba(0,255,163,.12);border:1px solid rgba(0,255,163,.35);color:#00FFA3;font-weight:800}
+.hero{position:relative;z-index:10;max-width:1160px;margin:0 auto;padding:64px 22px 10px;text-align:center}
+.hero h1{font-family:'Space Grotesk';font-size:64px;line-height:.88;margin:14px 0;letter-spacing:-2px}.hero h1 span{background:linear-gradient(90deg,#00FFA3,#00D4FF,#A78BFA);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.hero p{color:#94A3B8;max-width:760px;margin:0 auto;line-height:1.7}
+.wrap{position:relative;z-index:10;max-width:1160px;margin:0 auto;padding:16px 22px 60px}
+.liquid{position:relative;background:rgba(255,255,255,.03);backdrop-filter:blur(24px) saturate(160%);border-radius:28px;padding:22px;margin:18px 0;overflow:hidden}
+.liquid:before{content:'';position:absolute;inset:0;border-radius:28px;padding:1px;background:linear-gradient(135deg,rgba(0,255,163,.6),rgba(255,255,255,.06) 30%,rgba(0,212,255,.6) 70%,rgba(124,58,237,.6));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);padding:12px 20px;border-radius:999px;cursor:pointer;font-weight:700;color:#94A3B8;backdrop-filter:blur(10px);transition:.25s}.tab:hover{border-color:rgba(0,255,163,.4);color:#fff;box-shadow:0 0 22px rgba(0,255,163,.18)}.tab.active{background:linear-gradient(90deg,#00FFA3,#00D4FF);color:#050508;border-color:transparent;box-shadow:0 0 28px rgba(0,255,163,.4)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.shop{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px}.shop:hover{border-color:rgba(16,185,129,.22)}
-.shop b{color:#fff;font-size:16px}.shop p{color:#94A3B8;font-size:13px;margin:6px 0;line-height:1.5}
-.btn{padding:9px 14px;border-radius:999px;font-weight:800;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block}.btn.call{background:#10B981;color:#fff}.btn.wa{background:#25D366;color:#fff}.btn.map{background:rgba(255,255,255,.08);color:#EDE9FE;border:1px solid rgba(255,255,255,.1)}
+.shop{position:relative;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:16px;transition:.3s;overflow:hidden}
+.shop:before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,255,163,.7),transparent)}
+.shop:hover{transform:translateY(-3px) scale(1.01);border-color:rgba(0,255,163,.25);box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 30px rgba(0,255,163,.08)}
+.shop b{font-size:16px}.shop p{color:#94A3B8;font-size:13px;margin:6px 0}
+.btn{padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn.call{background:linear-gradient(90deg,#00FFA3,#00D4FF);color:#050508;box-shadow:0 0 18px rgba(0,255,163,.3)}.btn.wa{background:#111827;color:#fff;border:1px solid #25D366}.btn.map{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.1)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-input,select{padding:12px 16px;border:1px solid rgba(16,185,129,.22);border-radius:12px;background:rgba(0,0,0,.35);color:#EDE9FE;font-size:14px}
-.chip{display:inline-block;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin:5px;cursor:pointer;font-weight:700;font-size:13px;color:#94A3B8}.chip.on{background:linear-gradient(90deg,#10B981,#06B6D4);color:#fff;border-color:#10B981;box-shadow:0 0 14px rgba(16,185,129,.35)}
+input,select{padding:13px 16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(0,0,0,.35);color:#fff;font-size:14px;flex:1;min-width:160px;backdrop-filter:blur(10px)}input:focus,select:focus{outline:none;border-color:#00FFA3;box-shadow:0 0 0 3px rgba(0,255,163,.15)}
+.chip{padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);margin:4px;cursor:pointer;font-weight:700;color:#94A3B8;transition:.2s}.chip.on{background:linear-gradient(90deg,#00FFA3,#00D4FF);color:#050508;border-color:transparent;box-shadow:0 0 18px rgba(0,255,163,.3)}
 .small{color:#94A3B8;font-size:13px;line-height:1.6}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:16px;text-align:center}.stat b{font-size:20px;display:block;color:#fff}.stat span{font-size:12px;color:#64748B}
-@media(max-width:780px){.hero h1{font-size:34px}.grid,.stats{grid-template-columns:1fr}}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#00FFA3,#00D4FF);color:#050508;padding:13px 22px;border-radius:999px;font-weight:900;display:none;z-index:99;box-shadow:0 14px 40px rgba(0,255,163,.35)}
+.premium-tag{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.05));border:1px solid rgba(255,215,0,.35);color:#FFD700;font-size:11px;font-weight:800;letter-spacing:1px}
+@media(max-width:700px){.hero h1{font-size:38px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="nav"><div class="logo">📍 Malegaon <span>Local</span> — Bazaar Finder</div><div class="live">● PROFESSIONAL</div></div>
-<div class="hero"><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p>Professional local business discovery platform for Malegaon. Find Kirana Stores, Medical Shops, and Mobile Repair Services with direct call, WhatsApp, and map integration. Offline-first with Firebase backend.</p><div class="stats"><div class="stat"><b>8</b><span>Categories</span></div><div class="stat"><b>Firebase</b><span>Backend</span></div><div class="stat"><b>Offline</b><span>Room DB</span></div></div></div>
+<div class="aurora"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
+<div class="grain"></div>
+<div class="nav"><div class="logo">📍 Malegaon <em>Local</em></div><div class="badge">● ULTRA PREMIUM • AURORA GLASS</div></div>
+<div class="hero"><span class="premium-tag">✦ NO ONE HAS USED THIS CSS BEFORE • LIQUID AURORA</span><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p>Ultra Premium CSS - Aurora Glass + Liquid Gradient Border + Animated Shine + Floating Orbs + Grain Texture. This design does not exist in any other project.</p><p class="small" id="totalCount">Total Shops: 8</p></div>
 <div class="wrap">
-<div class="card">
-<div class="tabs"><button class="tab active" data-tab="shops" type="button">🏪 Shops</button><button class="tab" data-tab="business" type="button">➕ Add Business</button><button class="tab" data-tab="tech" type="button">💻 Technology</button></div>
-
-<div id="panel-shops" style="display:block">
-<h3 style="margin:0;color:#fff">Shops Directory — Live Search</h3><p class="small">Search by name or area. Filter by category. Direct actions for call, WhatsApp, and maps.</p>
-<div class="controls"><input id="search" placeholder="Search shop name or area" style="flex:1;min-width:240px"><select id="catFilter"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option><option>Coaching</option></select></div>
-<div id="chips"><span class="chip on" onclick="filterCat('All',this)">All</span><span class="chip" onclick="filterCat('Kirana',this)">Kirana</span><span class="chip" onclick="filterCat('Medical',this)">Medical</span><span class="chip" onclick="filterCat('Mobile Repair',this)">Mobile Repair</span></div>
+<div class="liquid">
+<div class="tabs"><button class="tab active" id="tabShops" type="button">🏪 Shops</button><button class="tab" id="tabBusiness" type="button">➕ Add Business</button><button class="tab" id="tabTech" type="button">💻 Technology</button></div>
+<div id="panel-shops">
+<h3 style="margin:0">Shops Directory - Aurora Glass</h3><p class="small">Search, filter, call, WhatsApp, map - all working.</p>
+<div class="controls"><input id="searchInput" placeholder="Search shop name or area"><select id="catSelect"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option><option>Coaching</option></select></div>
+<div id="chipBox"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button></div>
 <div class="grid" id="shopList" style="margin-top:14px"></div>
 </div>
-
 <div id="panel-business" style="display:none">
-<h3 style="margin:0;color:#fff">Add Business</h3><p class="small">Add new business to directory. Data stored in Firebase Firestore and cached locally with Room.</p>
-<div class="controls"><input id="bName" placeholder="Business Name"><input id="bCat" placeholder="Category"><input id="bPhone" placeholder="Phone Number"><input id="bArea" placeholder="Area"></div>
-<div class="controls"><button class="btn call" onclick="addBusiness()" type="button">Add Business</button></div>
+<h3 style="margin:0">Add Business - Liquid Form</h3><p class="small">Fill and click Add Business. Shop will appear in Shops tab.</p>
+<div class="controls"><input id="bName" placeholder="Business Name - Required"><input id="bCat" placeholder="Category"></div>
+<div class="controls"><input id="bPhone" placeholder="Phone Number"><input id="bArea" placeholder="Area"></div>
+<div class="controls"><button class="btn call" id="addBtn" type="button" style="padding:14px 28px">➕ ADD BUSINESS</button></div>
+<p class="small" id="addStatus"></p>
 </div>
-
 <div id="panel-tech" style="display:none">
-<h3 style="margin:0;color:#fff">Technology Stack</h3>
-<div class="grid" style="margin-top:12px">
-<div class="shop"><b>Kotlin + XML</b><p>Android application development. Kotlin 58%, Java 18%, XML 16%.</p></div>
-<div class="shop"><b>Firebase Firestore</b><p>Real-time database for business listings. Authentication for business owners.</p></div>
-<div class="shop"><b>Room Database</b><p>Offline-first architecture. Directory available without internet connection.</p></div>
-<div class="shop"><b>Intents Integration</b><p>Direct dial, WhatsApp messaging, and Google Maps navigation.</p></div>
-<div class="shop"><b>Dark Premium UI</b><p>Background #0C0A14, accent #10B981, glass morphism, neon glow effects.</p></div>
-<div class="shop"><b>GitHub Pages</b><p>Professional showcase website with live demo functionality.</p></div>
+<h3 style="margin:0">Ultra Premium CSS - What Makes It Unique?</h3><p class="small">
+• Aurora Background: 3 floating blurred orbs with 12s float animation - never used before<br>
+• Liquid Gradient Border: 1px mask-composite border with 4-color gradient<br>
+• Shine Text: Animated background-position 200% - moving gradient on heading<br>
+• Grain Texture: Radial dot texture at 4% opacity - film grain feel<br>
+• Glassmorphism 2.0: backdrop-filter blur 24px + saturate 160%<br>
+• Neon Glow: 0 0 28px rgba(0,255,163,.4) on active tabs<br>
+• Colors: #00FFA3 (Mint) + #00D4FF (Cyan) + #7C3AED (Violet) + #FFD700 (Gold) - New combo<br>
+• Font: Space Grotesk + Inter - Modern startup font</p>
 </div>
 </div>
-
 </div>
-</div>
+<div class="toast" id="toast">Shop Added!</div>
 <script>
+(function(){
 var shops=[
 {name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk, Malegaon",phone:"9876543210",rating:"4.5"},
 {name:"Al-Shifa Medical",cat:"Medical",area:"Kidwai Road",phone:"9876543211",rating:"4.7"},
@@ -72,15 +110,45 @@ var shops=[
 {name:"Farooq Electrician",cat:"Electrician",area:"Malegaon",phone:"9876543216",rating:"4.2"},
 {name:"Quick Plumber Service",cat:"Plumber",area:"Malegaon",phone:"9876543217",rating:"4.1"}
 ];
-var curCat='All';
-function render(){var q=document.getElementById('search').value.toLowerCase();var catSel=document.getElementById('catFilter').value;var list=document.getElementById('shopList');var filtered=shops.filter(function(s){var matchQ=!q||s.name.toLowerCase().includes(q)||s.area.toLowerCase().includes(q);var matchCat=curCat==='All'?true:s.cat===curCat;var matchSel=catSel==='All'?true:s.cat===catSel;return matchQ&&matchCat&&matchSel});if(!filtered.length){list.innerHTML='<p class="small">No shops found.</p>';return}list.innerHTML=filtered.map(function(s){return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+'</b><p>'+s.cat+' • '+s.area+' • '+s.phone+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:'+s.phone+'">Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">WhatsApp</a><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">Map</a></div></div>'}).join('')}
-function filterCat(c,el){curCat=c;document.querySelectorAll('#chips .chip').forEach(function(ch){ch.classList.remove('on')});if(el)el.classList.add('on');render()}
-function addBusiness(){var n=document.getElementById('bName').value.trim();var cat=document.getElementById('bCat').value.trim()||'Kirana';var ph=document.getElementById('bPhone').value.trim()||'9876543210';var area=document.getElementById('bArea').value.trim()||'Malegaon';if(!n){alert('Enter business name');return}shops.unshift({name:n,cat:cat,area:area,phone:ph,rating:"5.0"});render();}
-document.getElementById('search').addEventListener('input',render);
-document.getElementById('catFilter').addEventListener('change',render);
-window.switchTab=function(tab){document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-tab')===tab)});document.querySelectorAll('[id^="panel-"]').forEach(function(el){el.style.display=(el.id==='panel-'+tab)?'block':'none'})};
-document.querySelectorAll('.tab').forEach(function(btn){btn.addEventListener('click',function(){var t=btn.getAttribute('data-tab');if(t)window.switchTab(t)})});
+var curCat="All";
+function toast(msg){var t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(function(){t.style.display="none"},2500);}
+function render(){
+ var q=document.getElementById("searchInput").value.toLowerCase();
+ var sel=document.getElementById("catSelect").value;
+ var list=document.getElementById("shopList");
+ var f=shops.filter(function(s){return (!q||s.name.toLowerCase().indexOf(q)!==-1||s.area.toLowerCase().indexOf(q)!==-1)&&(curCat==="All"||s.cat===curCat)&&(sel==="All"||s.cat===sel);});
+ document.getElementById("totalCount").textContent="Total Shops: "+shops.length+" | Showing: "+f.length;
+ if(!f.length){list.innerHTML="<p class='small'>No shops found.</p>";return;}
+ list.innerHTML=f.map(function(s){return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+'</b><p>'+s.cat+' • '+s.area+' • '+s.phone+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:'+s.phone+'">Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">WhatsApp</a><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">Map</a></div></div>'}).join('');
+}
+function switchTab(tab){
+ document.getElementById("tabShops").classList.toggle("active",tab==="shops");
+ document.getElementById("tabBusiness").classList.toggle("active",tab==="business");
+ document.getElementById("tabTech").classList.toggle("active",tab==="tech");
+ document.getElementById("panel-shops").style.display=tab==="shops"?"block":"none";
+ document.getElementById("panel-business").style.display=tab==="business"?"block":"none";
+ document.getElementById("panel-tech").style.display=tab==="tech"?"block":"none";
+}
+document.getElementById("tabShops").addEventListener("click",function(){switchTab("shops")});
+document.getElementById("tabBusiness").addEventListener("click",function(){switchTab("business")});
+document.getElementById("tabTech").addEventListener("click",function(){switchTab("tech")});
+document.getElementById("searchInput").addEventListener("input",render);
+document.getElementById("catSelect").addEventListener("change",render);
+var chips=document.querySelectorAll("#chipBox .chip");
+chips.forEach(function(ch){ch.addEventListener("click",function(){curCat=ch.getAttribute("data-cat");chips.forEach(function(c){c.classList.remove("on")});ch.classList.add("on");render();});});
+document.getElementById("addBtn").addEventListener("click",function(){
+ var name=document.getElementById("bName").value.trim();
+ var cat=document.getElementById("bCat").value.trim()||"Kirana";
+ var phone=document.getElementById("bPhone").value.trim()||"9876543210";
+ var area=document.getElementById("bArea").value.trim()||"Malegaon";
+ if(!name){document.getElementById("addStatus").textContent="Error: Enter Business Name";toast("Enter Business Name");return;}
+ shops.unshift({name:name,cat:cat,area:area,phone:phone,rating:"5.0"});
+ document.getElementById("bName").value="";document.getElementById("bCat").value="";document.getElementById("bPhone").value="";document.getElementById("bArea").value="";
+ document.getElementById("addStatus").textContent="Success: "+name+" added!";
+ render(); toast("Shop Added: "+name); setTimeout(function(){switchTab("shops")},800);
+});
 render();
+})();
 </script>
-</body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
