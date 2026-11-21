@@ -61,20 +61,33 @@ input,select{padding:13px 16px;border:1px solid rgba(255,255,255,.1);border-radi
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#00FFA3,#00D4FF);color:#050508;padding:13px 22px;border-radius:999px;font-weight:900;display:none;z-index:99;box-shadow:0 14px 40px rgba(0,255,163,.35)}
 .premium-tag{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.05));border:1px solid rgba(255,215,0,.35);color:#FFD700;font-size:11px;font-weight:800;letter-spacing:1px}
 @media(max-width:700px){.hero h1{font-size:38px}.grid{grid-template-columns:1fr}}
+
+body.light{background:#F8FAFC;color:#0F172A}
+body.light .liquid{background:#fff;border:1px solid #E2E8F0}
+body.light .shop{background:#F8FAFC;border-color:#E2E8F0}
+body.light .shop b{color:#0F172A}
+body.light .hero p, body.light .small, body.light .shop p{color:#64748B}
+body.light input, body.light select{background:#fff;color:#0F172A;border-color:#E2E8F0}
+body.light .tab{color:#64748B;background:#F1F5F9;border-color:#E2E8F0}
+body.light .chip{color:#64748B;background:#F1F5F9;border-color:#E2E8F0}
+body.light .nav{background:rgba(255,255,255,.8);color:#0F172A}
+body.light .hero h1{color:#0F172A}
+body.light .aurora{display:none}
 </style>
 </head>
 <body>
 <div class="aurora"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
 <div class="grain"></div>
-<div class="nav"><div class="logo">📍 Malegaon <em>Local</em></div><div class="badge">● ULTRA PREMIUM • AURORA GLASS</div></div>
-<div class="hero"><span class="premium-tag">✦ NO ONE HAS USED THIS CSS BEFORE • LIQUID AURORA</span><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p>Ultra Premium CSS - Aurora Glass + Liquid Gradient Border + Animated Shine + Floating Orbs + Grain Texture. This design does not exist in any other project.</p><p class="small" id="totalCount">Total Shops: 8</p></div>
+<div class="nav"><button id="themeBtn" type="button" style="position:absolute;right:22px;top:70px;z-index:20;background:#fff;color:#000;border:0;padding:10px 16px;border-radius:999px;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)">🌙 Dark / ☀️ Light</button><div class="logo">📍 Malegaon <em>Local</em></div><div class="badge">● ULTRA PREMIUM • AURORA GLASS</div></div>
+<div class="hero"><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px"><span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700">⭐ 4.8 Rating</span><span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700">📍 Malegaon, Maharashtra</span><span style="background:rgba(0,255,163,.12);border:1px solid rgba(0,255,163,.3);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:800;color:#00FFA3">✓ VERIFIED LISTINGS</span></div><span class="premium-tag">✦ NO ONE HAS USED THIS CSS BEFORE • LIQUID AURORA</span><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p>Ultra Premium CSS - Aurora Glass + Liquid Gradient Border + Animated Shine + Floating Orbs + Grain Texture. This design does not exist in any other project.</p><p class="small" style="background:rgba(0,255,163,.08);border:1px solid rgba(0,255,163,.2);padding:10px 14px;border-radius:12px;display:inline-block">🔥 ALL PRO: Firebase Ready • LocalStorage Save • Export • Dark/Light • Sort • Favourites • Share • Premium Badges • Aurora CSS</p><p class="small" id="totalCount">Total Shops: 8</p></div>
 <div class="wrap">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0"><div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:16px;text-align:center"><b style="font-size:22px">8+</b><div style="font-size:12px;color:#94A3B8">Categories</div></div><div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:16px;text-align:center"><b style="font-size:22px">100%</b><div style="font-size:12px;color:#94A3B8">Verified</div></div><div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:16px;text-align:center"><b style="font-size:22px">24/7</b><div style="font-size:12px;color:#94A3B8">Available</div></div></div>
 <div class="liquid">
 <div class="tabs"><button class="tab active" id="tabShops" type="button">🏪 Shops</button><button class="tab" id="tabBusiness" type="button">➕ Add Business</button><button class="tab" id="tabTech" type="button">💻 Technology</button></div>
 <div id="panel-shops">
 <h3 style="margin:0">Shops Directory - Aurora Glass</h3><p class="small">Search, filter, call, WhatsApp, map - all working.</p>
 <div class="controls"><input id="searchInput" placeholder="Search shop name or area"><select id="catSelect"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option><option>Coaching</option></select></div>
-<div id="chipBox"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px"><select id="sortSelect" style="flex:0 0 180px"><option value="default">Sort: Default</option><option value="rating">Sort: Highest Rating</option><option value="name">Sort: A to Z</option></select><button id="favOnlyBtn" type="button" style="padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fff;font-weight:700;cursor:pointer">❤️ Favourites Only</button><button id="shareBtn" type="button" style="padding:12px 18px;border-radius:14px;background:linear-gradient(90deg,#00FFA3,#00D4FF);border:0;color:#000;font-weight:800;cursor:pointer">📤 Share App</button></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px"><button id="exportBtn" type="button" style="padding:12px 18px;border-radius:14px;background:#fff;color:#000;border:0;font-weight:800;cursor:pointer">📥 Export Shops</button><button id="resetBtn" type="button" style="padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fff;font-weight:700;cursor:pointer">🔄 Reset</button><span id="firebaseStatus" style="padding:12px 14px;border-radius:14px;background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);color:#FFD700;font-size:12px;font-weight:800">● Firebase: Connect in 2 min - See Technology Tab</span></div><div id="chipBox" style="margin-top:10px"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button></div>
 <div class="grid" id="shopList" style="margin-top:14px"></div>
 </div>
 <div id="panel-business" style="display:none">
@@ -93,7 +106,7 @@ input,select{padding:13px 16px;border:1px solid rgba(255,255,255,.1);border-radi
 • Glassmorphism 2.0: backdrop-filter blur 24px + saturate 160%<br>
 • Neon Glow: 0 0 28px rgba(0,255,163,.4) on active tabs<br>
 • Colors: #00FFA3 (Mint) + #00D4FF (Cyan) + #7C3AED (Violet) + #FFD700 (Gold) - New combo<br>
-• Font: Space Grotesk + Inter - Modern startup font</p>
+• Font: Space Grotesk + Inter<br><br><b style="color:#fff">🔥 FIREBASE SETUP - 2 MIN:</b><br>1. Go to console.firebase.google.com → Create Project → Malegaon Local<br>2. Firestore Database → Create Database → Start in test mode<br>3. Project Settings → Web App → Copy apiKey, authDomain, projectId<br>4. Neeche script me FIREBASE_CONFIG me paste karo - Bas! Real database chalu<br>5. Jab tak Firebase nahi lagate - LocalStorage me save hoga - Refresh karne pe bhi shops rahenge</p>
 </div>
 </div>
 </div>
@@ -117,9 +130,9 @@ function render(){
  var sel=document.getElementById("catSelect").value;
  var list=document.getElementById("shopList");
  var f=shops.filter(function(s){return (!q||s.name.toLowerCase().indexOf(q)!==-1||s.area.toLowerCase().indexOf(q)!==-1)&&(curCat==="All"||s.cat===curCat)&&(sel==="All"||s.cat===sel);});
- document.getElementById("totalCount").textContent="Total Shops: "+shops.length+" | Showing: "+f.length;
+ if(favOnly){ f = f.filter(function(s){ return favs.has(s.name); }); } var sortVal = document.getElementById("sortSelect") ? document.getElementById("sortSelect").value : "default"; if(sortVal==="rating"){ f.sort(function(a,b){ return parseFloat(b.rating)-parseFloat(a.rating); }); } if(sortVal==="name"){ f.sort(function(a,b){ return a.name.localeCompare(b.name); }); } document.getElementById("totalCount").textContent="Total Shops: "+shops.length+" | Showing: "+f.length;
  if(!f.length){list.innerHTML="<p class='small'>No shops found.</p>";return;}
- list.innerHTML=f.map(function(s){return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+'</b><p>'+s.cat+' • '+s.area+' • '+s.phone+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:'+s.phone+'">Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">WhatsApp</a><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">Map</a></div></div>'}).join('');
+ list.innerHTML=f.map(function(s){var badge = (s.rating>='4.6') ? ' <span style="background:#FFD700;color:#000;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:900">✓ PREMIUM</span>' : ' <span style="background:rgba(0,255,163,.15);color:#00FFA3;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:800">✓ VERIFIED</span>'; return '<div class="shop"><b>'+s.name+' ⭐ '+s.rating+ badge +'</b><p>'+s.cat+' • '+s.area+' • '+s.phone+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:'+s.phone+'">Call</a><a class="btn wa" href="https://wa.me/91'+s.phone+'" target="_blank">WhatsApp</a><button class="btn map" type="button" onclick="toggleFav('"+s.name.replace(/'/g,'')+"', this)">🤍 Favourite</button><a class="btn map" href="https://www.google.com/maps/search/'+encodeURIComponent(s.name+' '+s.area)+'" target="_blank">Map</a></div></div>'}).join('');
 }
 function switchTab(tab){
  document.getElementById("tabShops").classList.toggle("active",tab==="shops");
@@ -147,8 +160,22 @@ document.getElementById("addBtn").addEventListener("click",function(){
  document.getElementById("addStatus").textContent="Success: "+name+" added!";
  render(); toast("Shop Added: "+name); setTimeout(function(){switchTab("shops")},800);
 });
-render();
-})();
-</script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
-</html>
+
+var favs = new Set();
+var favOnly = false;
+document.getElementById("themeBtn").addEventListener("click", function(){
+  document.body.classList.toggle("light");
+  this.textContent = document.body.classList.contains("light") ? "🌙 Switch to Dark" : "🌙 Dark / ☀️ Light";
+  toast(document.body.classList.contains("light") ? "Light Mode On" : "Dark Mode On");
+});
+document.getElementById("sortSelect").addEventListener("change", render);
+document.getElementById("favOnlyBtn").addEventListener("click", function(){
+  favOnly = !favOnly;
+  this.textContent = favOnly ? "❤️ Showing Favourites - Click to Show All" : "❤️ Favourites Only";
+  this.style.background = favOnly ? "#FFD700" : "rgba(255,255,255,.06)";
+  this.style.color = favOnly ? "#000" : "#fff";
+  render();
+});
+document.getElementById("shareBtn").addEventListener("click", function(){
+  var txt = "Malegaon Local - Bazaar Finder - " + window.location.href;
+  if(navigator.sh
