@@ -22,260 +22,194 @@
   font-family: "Optimistic Mono", ui-monospace, monospace;
 }
 </style>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Malegaon Local - iOS Theme</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malegaon Local - FINAL</title>
 <style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui;color:#fff;overflow-x:hidden;font-weight:500;letter-spacing:-.1px}
-/* ===== VIVID WALLPAPER - Jisse Glass Transparent Dikhe ===== */
-body::before{content:'';position:fixed;inset:0;z-index:0;background:
-  radial-gradient(700px 500px at 10% 10%, #FF375F 0%, transparent 60%),
-  radial-gradient(700px 500px at 90% 10%, #FF9F0A 0%, transparent 60%),
-  radial-gradient(800px 600px at 50% 50%, #5856D6 0%, transparent 65%),
-  radial-gradient(700px 500px at 10% 90%, #30D158 0%, transparent 60%),
-  radial-gradient(700px 500px at 90% 90%, #0A84FF 0%, transparent 60%),
-  linear-gradient(135deg,#1C1C1E,#0A0A0C);
-  pointer-events:none}
-body.light::before{background:
-  radial-gradient(700px 500px at 10% 10%, #FF9F0A 0%, transparent 60%),
-  radial-gradient(700px 500px at 90% 10%, #FF375F 0%, transparent 60%),
-  radial-gradient(800px 600px at 50% 50%, #64D2FF 0%, transparent 65%),
-  radial-gradient(700px 500px at 10% 90%, #30D158 0%, transparent 60%),
-  radial-gradient(700px 500px at 90% 90%, #BF5AF2 0%, transparent 60%),
-  linear-gradient(135deg,#FFE8CC,#FFF2F2);
-}
-body.light{color:#1C1C1E}
-/* ===== REAL GLASS - EKDUM TRANSPARENT ===== */
-.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(255,255,255,.08);backdrop-filter:blur(25px) saturate(200%);-webkit-backdrop-filter:blur(25px) saturate(200%);border-bottom:1px solid rgba(255,255,255,.18)}
-body.light .nav{background:rgba(255,255,255,.25);border-bottom:1px solid rgba(255,255,255,.5)}
-.logo{font-weight:800;letter-spacing:-.3px;font-size:22px;letter-spacing:-.5px}.logo span{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.3)}
-body.light .logo span{color:#007AFF;text-shadow:none}
-.hero{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:28px 18px 0;text-align:center}
-.hero h1{font-size:44px;line-height:1.05;margin:10px 0;letter-spacing:-1.2px;font-weight:800;text-shadow:0 4px 20px rgba(0,0,0,.3)}.hero h1 span{color:#fff}
-body.light .hero h1{color:#1C1C1E;text-shadow:none} body.light .hero h1 span{color:#007AFF}
-.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:14px 18px 90px}
-/* Glass Card - 12% white only - peeche ka color saaf dikhega */
-.card{background:rgba(20,20,24,.45);background:rgba(255,255,255,.16);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,.25);border-radius:28px;padding:20px;margin:14px 0;box-shadow:0 20px 40px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.3)}
-body.light .card{background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.6);box-shadow:0 20px 40px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.6)}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui;background:#0A0A0C;color:#fff;padding-bottom:80px}
+body.light{background:#F2F2F7;color:#1C1C1E}
+body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(600px 400px at 10% 10%,#FF375F,transparent 60%),radial-gradient(600px 400px at 90% 10%,#FF9F0A,transparent 60%),radial-gradient(700px 500px at 50% 50%,#5856D6,transparent 65%),radial-gradient(600px 400px at 10% 90%,#30D158,transparent 60%),radial-gradient(600px 400px at 90% 90%,#0A84FF,transparent 60%),linear-gradient(135deg,#1C1C1E,#0A0A0C);pointer-events:none}
+body.light::before{background:radial-gradient(600px 400px at 10% 10%,#FF9F0A,transparent 60%),radial-gradient(600px 400px at 90% 10%,#FF375F,transparent 60%),radial-gradient(700px 500px at 50% 50%,#64D2FF,transparent 65%),linear-gradient(135deg,#FFE8CC,#FFF2F2)}
+.nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(255,255,255,.10);backdrop-filter:blur(25px);border-bottom:1px solid rgba(255,255,255,.2)}
+body.light .nav{background:rgba(255,255,255,.35);border-color:rgba(255,255,255,.6)}
+.logo{font-weight:800;font-size:22px}
+.hero{position:relative;z-index:1;text-align:center;padding:24px 16px 0}
+.hero h1{font-size:38px;line-height:1.1;margin:8px 0;font-weight:800}
+.wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:14px 16px}
+.card{background:rgba(255,255,255,.16);backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:18px;margin:12px 0}
+body.light .card{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.7)}
 .tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.14);padding:11px 18px;border-radius:999px;cursor:pointer;font-weight:700;color:#fff;backdrop-filter:blur(10px)}
-body.light .tab{background:rgba(255,255,255,.4);color:#1C1C1E;border-color:rgba(255,255,255,.6)}
-.tab.active{background:#fff;color:#000;border-color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.tab{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;padding:11px 18px;border-radius:999px;font-weight:700;cursor:pointer}
+body.light .tab{background:rgba(255,255,255,.5);color:#1C1C1E}
+.tab.active{background:#fff;color:#000}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.shop{background:rgba(255,255,255,.14);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.20);border-radius:22px;padding:16px;transition:.25s;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
-body.light .shop{background:rgba(255,255,255,.40);border:1px solid rgba(255,255,255,.6)}
-.shop:hover{transform:translateY(-2px);background:rgba(255,255,255,.18)}
-.shop b{font-size:15.5px;font-weight:700;color:#FFFFFF;letter-spacing:-.1px}.shop p{color:rgba(255,255,255,.92);font-size:13.5px;margin:6px 0;font-weight:500}
-body.light .shop p{color:#6B7280}
+.shop{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:14px}
+body.light .shop{background:rgba(255,255,255,.55)}
+.shop b{font-size:15.5px;font-weight:700}
+.shop p{font-size:13.5px;font-weight:500;opacity:.92;margin:6px 0}
 .btn{padding:10px 15px;border-radius:999px;font-weight:700;font-size:13px;border:0;cursor:pointer;text-decoration:none;display:inline-block}
-.btn.call{background:#fff;color:#000;box-shadow:0 6px 16px rgba(0,0,0,.2)}.btn.wa{background:#30D158;color:#fff}.btn.map{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px)}
-body.light .btn.map{background:rgba(255,255,255,.6);color:#1C1C1E;border-color:rgba(255,255,255,.8)}
+.btn.call{background:#fff;color:#000}.btn.wa{background:#30D158;color:#fff}.btn.map{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25)}
+body.light .btn.map{background:rgba(255,255,255,.6);color:#1C1C1E}
 .btn.fav{background:#FF9F0A;color:#fff}
+input,select{padding:12px 14px;border:1px solid rgba(255,255,255,.25);border-radius:13px;background:rgba(255,255,255,.12);color:#fff;font-size:14px;flex:1;min-width:140px}
+body.light input,body.light select{background:rgba(255,255,255,.6);color:#1C1C1E}
 .controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-input,select{padding:13px 15px;border:1px solid rgba(255,255,255,.25);border-radius:14px;background:rgba(255,255,255,.12);color:#fff;font-size:14px;flex:1;min-width:150px;backdrop-filter:blur(10px)}
-body.light input,body.light select{background:rgba(255,255,255,.5);color:#1C1C1E;border-color:rgba(255,255,255,.7)}
-input::placeholder{color:rgba(255,255,255,.7)} body.light input::placeholder{color:#9CA3AF}
-.chip{padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);cursor:pointer;font-weight:700;color:#fff}.chip.on{background:#fff;color:#000}
-body.light .chip{background:rgba(255,255,255,.4);color:#1C1C1E} body.light .chip.on{background:#1C1C1E;color:#fff}
-.small{color:rgba(255,255,255,.92);font-weight:500;font-size:13px;line-height:1.6} body.light .small{color:#6B7280}
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);backdrop-filter:blur(20px);color:#fff;padding:13px 22px;border-radius:999px;font-weight:700;display:none;z-index:99;border:1px solid rgba(255,255,255,.2)}
-.theme-pill{display:inline-block;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff}
-body.light .theme-pill{background:rgba(255,255,255,.5);color:#1C1C1E}
-/* iOS Bottom Tab Bar - Glass */
-.ios-tabbar{position:fixed;bottom:0;left:0;right:0;z-index:30;display:flex;justify-content:space-around;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.12);backdrop-filter:blur(30px) saturate(200%);-webkit-backdrop-filter:blur(30px) saturate(200%);border-top:1px solid rgba(255,255,255,.25)}
-body.light .ios-tabbar{background:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.6)}
-.ios-tab{display:flex;flex-direction:column;align-items:center;gap:2px;background:0;border:0;cursor:pointer;color:rgba(255,255,255,.7);font-size:10px;font-weight:600;padding:4px 12px;border-radius:12px}
-body.light .ios-tab{color:#8A8A8E}
-.ios-tab.active{color:#fff} body.light .ios-tab.active{color:#007AFF}
-.ios-tab span:first-child{font-size:22px}
-.ios-segment{display:flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:3px;gap:3px;margin:12px 0}
-body.light .ios-segment{background:rgba(255,255,255,.4)}
-.ios-segment button{flex:1;border:0;background:transparent;padding:10px;border-radius:9px;font-weight:700;color:rgba(255,255,255,.8);cursor:pointer}
-body.light .ios-segment button{color:#6B7280}
-.ios-segment button.active{background:#fff;color:#000;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
-body:not(.light) .hero p, body:not(.light) .small{font-weight:500}
-body:not(.light) input, body:not(.light) select{font-weight:500}
-body:not(.light) .btn{font-weight:700}
+.chip{padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:700;cursor:pointer}
+body.light .chip{background:rgba(255,255,255,.5);color:#1C1C1E}
+.chip.on{background:#fff;color:#000}
+.small{font-size:13px;opacity:.92;font-weight:500;line-height:1.6}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:12px 20px;border-radius:999px;font-weight:700;display:none;z-index:99;border:1px solid rgba(255,255,255,.3)}
+.bottombar{position:fixed;bottom:0;left:0;right:0;z-index:30;display:flex;justify-content:space-around;padding:10px;background:rgba(255,255,255,.12);backdrop-filter:blur(30px);border-top:1px solid rgba(255,255,255,.25)}
+body.light .bottombar{background:rgba(255,255,255,.5)}
+.bottombar button{border:0;background:transparent;color:#fff;font-size:11px;font-weight:600;cursor:pointer;padding:6px 12px;border-radius:10px}
+body.light .bottombar button{color:#1C1C1E}
+.bottombar button.active{color:#fff;background:rgba(0,0,0,.3)}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}}
 </style>
 </head>
 <body>
-<div class="nav"><div class="logo">📍 Malegaon <span>Local</span></div><span id="themeLabel" class="theme-pill" style="margin-right:8px">🌙 DARK MODE</span><button id="themeBtn" type="button" style="padding:9px 14px;border-radius:999px;border:0;font-weight:800;cursor:pointer;background:#fff;color:#000">🌙 Dark / ☀️ Light</button></div>
-<div class="hero"><h1>Malegaon Local<br><span>Bazaar Finder</span></h1><p class="small" id="themeStatus">DARK Slight Bold • Likha hua saaf dikhega • Glass abhi bhi transparent</p><p class="small" id="totalCount">Total: 8</p></div>
+<div class="nav"><div class="logo">📍 Malegaon Local</div><button onclick="toggleTheme()" style="padding:9px 14px;border-radius:999px;border:0;font-weight:800;cursor:pointer;background:#fff;color:#000">🌙 / ☀️ Theme</button></div>
+<div class="hero"><h1>Malegaon Local<br>Bazaar Finder</h1><p class="small">FINAL - iOS Glass Transparent - Dark Slight Bold</p><p class="small" id="totalCount">Total: 6</p></div>
 <div class="wrap">
 <div class="card">
-<div class="ios-segment" style="margin:0">
-<button class="tab active" id="btnTabShops" type="button">🏪 Shops</button>
-<button class="tab" id="btnTabAdd" type="button">➕ Add Business</button>
-<button class="tab" id="btnTabTech" type="button">💻 Technology</button>
+<div class="tabs">
+<button class="tab active" id="tab1" onclick="showTab('shops')">🏪 Shops</button>
+<button class="tab" id="tab2" onclick="showTab('add')">➕ Add Business</button>
+<button class="tab" id="tab3" onclick="showTab('tech')">💻 Technology</button>
 </div>
 
 <div id="panelShops" style="margin-top:14px">
-<div class="controls"><input id="searchInput" placeholder="Search - type Altaf"><select id="catSelect"><option value="All">All Categories</option><option value="Kirana">Kirana</option><option value="Medical">Medical</option><option value="Mobile Repair">Mobile Repair</option><option value="Electrician">Electrician</option><option value="Plumber">Plumber</option></select><select id="sortSelect"><option value="default">Sort: Default</option><option value="rating">Sort: Highest Rating</option><option value="name">Sort: A to Z</option></select></div>
-<div><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button><button class="chip" id="favFilterBtn" type="button" style="background:#F59E0B;color:#000">❤️ Favourites Only: OFF</button></div>
-<div class="controls"><button class="btn call" id="shareBtn" type="button">📤 Share App</button><button class="btn map" id="exportBtn" type="button">📥 Export</button><button class="btn map" id="resetBtn" type="button">🔄 Reset</button></div>
+<div class="controls"><input id="searchBox" placeholder="Search - type Altaf" oninput="doRender()"><select id="catBox" onchange="doRender()"><option value="All">All Categories</option><option value="Kirana">Kirana</option><option value="Medical">Medical</option><option value="Mobile Repair">Mobile Repair</option></select><select id="sortBox" onchange="doRender()"><option value="default">Sort: Default</option><option value="rating">Sort: Highest Rating</option><option value="name">Sort: A to Z</option></select></div>
+<div><button class="chip on" onclick="setCat('All',this)">All</button><button class="chip" onclick="setCat('Kirana',this)">Kirana</button><button class="chip" onclick="setCat('Medical',this)">Medical</button><button class="chip" onclick="setCat('Mobile Repair',this)">Mobile Repair</button><button class="chip" id="favBtn" onclick="toggleFavFilter()">❤️ Favourites: OFF</button></div>
+<div class="controls"><button class="btn call" onclick="shareApp()">📤 Share</button><button class="btn map" onclick="exportShops()">📥 Export</button></div>
 <div class="grid" id="shopList" style="margin-top:12px"></div>
 </div>
 
 <div id="panelAdd" style="display:none;margin-top:14px">
-<h3 style="margin:0">Add Business</h3><p class="small">Naam bharo aur ADD BUSINESS dabao - shop Shops me aa jayega</p>
-<div class="controls"><input id="bName" placeholder="Business Name *"><input id="bCat" placeholder="Category - Kirana"></div>
+<h3 style="margin:0">Add Business</h3><p class="small">Naam bharo aur ADD BUSINESS dabao</p>
+<div class="controls"><input id="bName" placeholder="Business Name *"><input id="bCat" placeholder="Category"></div>
 <div class="controls"><input id="bPhone" placeholder="Phone"><input id="bArea" placeholder="Area"></div>
-<div class="controls"><button class="btn call" id="addBtn" type="button" style="padding:14px 28px;font-size:15px">➕ ADD BUSINESS - CLICK HERE</button><button class="btn map" id="clearBtn" type="button">Clear</button></div>
+<div class="controls"><button class="btn call" onclick="addShop()" style="padding:14px 28px;font-size:15px">➕ ADD BUSINESS - CLICK HERE</button></div>
 <p class="small" id="addStatus"></p>
-<p class="small" id="debugText">Debug: Page loaded - JS running</p>
 </div>
 
 <div id="panelTech" style="display:none;margin-top:14px">
-<h3 style="margin:0">Technology</h3><p class="small">HTML / CSS / JS • LocalStorage Save • Firebase Ready<br>Firebase: console.firebase.google.com pe project banao, apiKey paste karo - live ho jayega. Abhi LocalStorage se save ho raha hai.</p>
+<h3 style="margin:0">Technology</h3><p class="small">HTML / CSS / JS • iOS Glass Transparent • Dark Slight Bold<br>Firebase ready - LocalStorage save ho raha hai</p>
 </div>
 </div>
 </div>
-<div class="ios-tabbar">
-<button class="ios-tab active" id="iosTabShops" type="button"><span>🏪</span>Shops</button>
-<button class="ios-tab" id="iosTabAdd" type="button"><span>➕</span>Add</button>
-<button class="ios-tab" id="iosTabTech" type="button"><span>💻</span>Tech</button>
-<button class="ios-tab" id="iosTabTheme" type="button"><span>🌙</span>Theme</button>
+
+<div class="bottombar">
+<button id="bb1" class="active" onclick="showTab('shops')">🏪<br>Shops</button>
+<button id="bb2" onclick="showTab('add')">➕<br>Add</button>
+<button id="bb3" onclick="showTab('tech')">💻<br>Tech</button>
+<button onclick="toggleTheme()">🌙<br>Theme</button>
 </div>
 <div class="toast" id="toast">Done</div>
 
 <script>
-// FINAL CLEAN JS - NO DUPLICATE FUNCTIONS
 var shops = [
-  {name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk",phone:"9876543210",rating:"4.5"},
-  {name:"Al-Shifa Medical",cat:"Medical",area:"Kidwai Road",phone:"9876543211",rating:"4.7"},
-  {name:"Mobile World Repair",cat:"Mobile Repair",area:"Qidwai Road",phone:"9876543212",rating:"4.6"},
-  {name:"New Bharat Kirana",cat:"Kirana",area:"Islam Pura",phone:"9876543213",rating:"4.3"},
-  {name:"City Medical",cat:"Medical",area:"Azad Chowk",phone:"9876543214",rating:"4.8"},
-  {name:"Smart Mobile Care",cat:"Mobile Repair",area:"Satana Naka",phone:"9876543215",rating:"4.4"}
+{name:"Altaf Kirana Store",cat:"Kirana",area:"Mushaira Chowk",phone:"9876543210",rating:"4.5"},
+{name:"Al-Shifa Medical",cat:"Medical",area:"Kidwai Road",phone:"9876543211",rating:"4.7"},
+{name:"Mobile World Repair",cat:"Mobile Repair",area:"Qidwai Road",phone:"9876543212",rating:"4.6"},
+{name:"New Bharat Kirana",cat:"Kirana",area:"Islam Pura",phone:"9876543213",rating:"4.3"},
+{name:"City Medical",cat:"Medical",area:"Azad Chowk",phone:"9876543214",rating:"4.8"},
+{name:"Smart Mobile Care",cat:"Mobile Repair",area:"Satana Naka",phone:"9876543215",rating:"4.4"}
 ];
 var curCat = "All";
 var favOnly = false;
 var favs = [];
+try{ var s = localStorage.getItem("ml_shops"); if(s){ var p = JSON.parse(s); if(p.length>0) shops = p; } var f = localStorage.getItem("ml_favs"); if(f) favs = JSON.parse(f); var t = localStorage.getItem("ml_theme"); if(t==="light") document.body.classList.add("light"); }catch(e){}
 
-function showToast(msg){
-  var t = document.getElementById("toast");
-  t.textContent = msg;
-  t.style.display = "block";
-  setTimeout(function(){ t.style.display = "none"; }, 2500);
-}
-function saveData(){
-  try{ localStorage.setItem("ml_shops", JSON.stringify(shops)); localStorage.setItem("ml_favs", JSON.stringify(favs)); }catch(e){}
-}
-function loadData(){
-  try{
-    var s = localStorage.getItem("ml_shops");
-    if(s){ var p = JSON.parse(s); if(p && p.length>0){ shops = p; } }
-    var f = localStorage.getItem("ml_favs");
-    if(f){ favs = JSON.parse(f); }
-  }catch(e){}
-}
+function toast(msg){ var el = document.getElementById("toast"); el.textContent = msg; el.style.display = "block"; setTimeout(function(){ el.style.display = "none"; }, 2500); }
+function save(){ try{ localStorage.setItem("ml_shops", JSON.stringify(shops)); localStorage.setItem("ml_favs", JSON.stringify(favs)); }catch(e){} }
 function showTab(which){
-  document.getElementById("btnTabShops").classList.toggle("active", which==="shops");
-  document.getElementById("btnTabAdd").classList.toggle("active", which==="add");
-  document.getElementById("btnTabTech").classList.toggle("active", which==="tech");
+  document.getElementById("tab1").className = "tab" + (which==="shops" ? " active" : "");
+  document.getElementById("tab2").className = "tab" + (which==="add" ? " active" : "");
+  document.getElementById("tab3").className = "tab" + (which==="tech" ? " active" : "");
   document.getElementById("panelShops").style.display = which==="shops" ? "block" : "none";
   document.getElementById("panelAdd").style.display = which==="add" ? "block" : "none";
   document.getElementById("panelTech").style.display = which==="tech" ? "block" : "none";
+  document.getElementById("bb1").className = which==="shops" ? "active" : "";
+  document.getElementById("bb2").className = which==="add" ? "active" : "";
+  document.getElementById("bb3").className = which==="tech" ? "active" : "";
 }
-function render(){
-  var q = document.getElementById("searchInput").value.toLowerCase();
-  var sel = document.getElementById("catSelect").value;
-  var sort = document.getElementById("sortSelect").value;
-  var list = document.getElementById("shopList");
-  var out = [];
-  for(var i=0;i<shops.length;i++){
-    var s = shops[i];
-    if(q && s.name.toLowerCase().indexOf(q)===-1 && s.area.toLowerCase().indexOf(q)===-1){ continue; }
-    if(curCat!=="All" && s.cat!==curCat){ continue; }
-    if(sel!=="All" && s.cat!==sel){ continue; }
-    if(favOnly && favs.indexOf(s.name)===-1){ continue; }
-    out.push(s);
-  }
-  if(sort==="rating"){ out.sort(function(a,b){ return parseFloat(b.rating)-parseFloat(a.rating); }); }
-  if(sort==="name"){ out.sort(function(a,b){ return a.name.localeCompare(b.name); }); }
-  document.getElementById("totalCount").textContent = "Total: " + shops.length + " | Showing: " + out.length;
-  if(out.length===0){ list.innerHTML = "<p class='small'>No shops found. Add new business.</p>"; return; }
-  var html = "";
-  for(var j=0;j<out.length;j++){
-    var sh = out[j];
-    var isFav = favs.indexOf(sh.name)!==-1;
-    var badge = parseFloat(sh.rating)>=4.6 ? " <span style='background:#FFD700;color:#000;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:900'>PREMIUM</span>" : " <span style='background:rgba(0,255,163,.15);color:#00FFA3;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:800'>VERIFIED</span>";
-    html += '<div class="shop"><b>' + sh.name + ' ⭐ ' + sh.rating + badge + '</b><p>' + sh.cat + ' • ' + sh.area + ' • ' + sh.phone + '</p>';
-    html += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">';
-    html += '<a class="btn call" href="tel:' + sh.phone + '">Call</a>';
-    html += '<a class="btn wa" href="https://wa.me/91' + sh.phone + '" target="_blank">WhatsApp</a>';
-    html += '<button class="btn fav favBtn" type="button" data-name="' + sh.name + '">' + (isFav ? "❤️ Favourited" : "🤍 Favourite") + '</button>';
-    html += '</div></div>';
-  }
-  list.innerHTML = html;
-  var favBtns = list.querySelectorAll(".favBtn");
-  for(var k=0;k<favBtns.length;k++){
-    favBtns[k].addEventListener("click", function(){
-      var nm = this.getAttribute("data-name");
-      var idx = favs.indexOf(nm);
-      if(idx===-1){ favs.push(nm); showToast("Added to Favourites: " + nm); }
-      else { favs.splice(idx,1); showToast("Removed: " + nm); }
-      saveData(); render();
-    });
-  }
+function setCat(c, btn){
+  curCat = c;
+  var chips = document.querySelectorAll(".chip");
+  for(var i=0;i<chips.length;i++){ if(chips[i].id!=="favBtn") chips[i].classList.remove("on"); }
+  btn.classList.add("on");
+  doRender();
 }
-
-// ALL BUTTONS - addEventListener
-document.getElementById("btnTabShops").addEventListener("click", function(){ showTab("shops"); });
-document.getElementById("btnTabAdd").addEventListener("click", function(){ showTab("add"); });
-document.getElementById("btnTabTech").addEventListener("click", function(){ showTab("tech"); });
-document.getElementById("searchInput").addEventListener("input", render);
-document.getElementById("catSelect").addEventListener("change", render);
-document.getElementById("sortSelect").addEventListener("change", render);
-document.getElementById("themeBtn").addEventListener("click", function(){
+function toggleFavFilter(){
+  favOnly = !favOnly;
+  document.getElementById("favBtn").textContent = favOnly ? "❤️ Favourites: ON" : "❤️ Favourites: OFF";
+  doRender();
+}
+function toggleTheme(){
   var isLight = document.body.classList.toggle("light");
   try{ localStorage.setItem("ml_theme", isLight ? "light" : "dark"); }catch(e){}
-  document.getElementById("themeLabel").textContent = isLight ? "☀️ LIGHT MODE" : "🌙 DARK MODE";
-  document.getElementById("themeStatus").textContent = isLight ? "Current Theme: LIGHT • Pura White Theme ON hai" : "Current Theme: DARK • Pura Black Theme ON hai";
-  this.textContent = isLight ? "🌙 Switch to Dark" : "☀️ Switch to Light";
-  showToast(isLight ? "Light Mode ON - Pura White Ho Gaya" : "Dark Mode ON - Pura Black Ho Gaya");
-});
-document.getElementById("favFilterBtn").addEventListener("click", function(){
-  favOnly = !favOnly;
-  this.textContent = favOnly ? "❤️ Favourites Only: ON" : "❤️ Favourites Only: OFF";
-  render();
-});
-document.getElementById("shareBtn").addEventListener("click", function(){
-  var txt = "Malegaon Local - Bazaar Finder";
-  if(navigator.share){ navigator.share({title:txt, text:txt, url:location.href}); }
-  else { try{ navigator.clipboard.writeText(location.href); showToast("Link Copied!"); }catch(e){ showToast("Share: " + location.href); } }
-});
-document.getElementById("exportBtn").addEventListener("click", function(){
-  var blob = new Blob([JSON.stringify(shops,null,2)], {type:"application/json"});
-  var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "malegaon-shops.json"; a.click();
-  showToast("Exported " + shops.length + " shops");
-});
-document.getElementById("resetBtn").addEventListener("click", function(){
-  if(confirm("Reset to default?")){ localStorage.removeItem("ml_shops"); localStorage.removeItem("ml_favs"); location.reload(); }
-});
-document.getElementById("clearBtn").addEventListener("click", function(){
-  document.getElementById("bName").value=""; document.getElementById("bCat").value=""; document.getElementById("bPhone").value=""; document.getElementById("bArea").value="";
-  document.getElementById("addStatus").textContent="";
-});
-document.getElementById("addBtn").addEventListener("click", function(){
+  toast(isLight ? "Light Mode ON" : "Dark Mode ON");
+}
+function toggleFav(name){
+  var idx = favs.indexOf(name);
+  if(idx===-1){ favs.push(name); toast("Added to Favourites: " + name); }
+  else { favs.splice(idx,1); toast("Removed: " + name); }
+  save(); doRender();
+}
+function addShop(){
   var name = document.getElementById("bName").value.trim();
   var cat = document.getElementById("bCat").value.trim() || "Kirana";
   var phone = document.getElementById("bPhone").value.trim() || "9876543210";
   var area = document.getElementById("bArea").value.trim() || "Malegaon";
   var st = document.getElementById("addStatus");
-  if(!name){
-    st.textContent = "Error: Please enter Business Name";
-    st.style.color = "#F87171";
-    showToast("Please enter Business Name");
-    document.getElementById("bName").focus();
-    return;
-  }
+  if(!name){ st.textContent = "Error: Please enter Business Name"; st.style.color = "red"; toast("Please enter Business Name"); return; }
   shops.unshift({name:name, cat:cat, area:area, phone:phone, rating:"5.0"});
   document.getElementById("bName").value=""; document.getElementById("bCat").value=""; document.getElementById("bPhone").value=""; document.getElementById("bArea").value="";
-  document.getElementById("searchInput").value=""; document.getElementById("catSelect").value="All"; curCat="All";
-  var chips = document.querySelectorAll(".chip[data-cat]");
-  for(var c=0;c<chips.length;c++){ chips[c].classList.toggle("on", chips[c].getAttribute("data-cat")==="All"); }
-  st.textContent = "Success: " + name + " added!";
-  st.style.color = "#00FFA3";
-  saveData(); render(); showToast("Shop Added: " + name);
+  document.getElementById("searchBox").value=""; document.getElementById("catBox").value="All"; curCat="All";
+  st.textContent = "Success: " + name + " added!"; st.style.color = "#30D158";
+  save(); doRender(); toast("Shop Added: " + name);
+  setTimeout(function(){ showTab("shops"); }, 700);
+}
+function shareApp(){
+  if(navigator.share){ navigator.share({title:"Malegaon Local", text:"Malegaon Local - Bazaar Finder", url:location.href}); }
+  else { try{ navigator.clipboard.writeText(location.href); toast("Link Copied!"); }catch(e){ toast(location.href); } }
+}
+function exportShops(){
+  var blob = new Blob([JSON.stringify(shops,null,2)], {type:"application/json"});
+  var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "malegaon-shops.json"; a.click();
+  toast("Exported " + shops.length + " shops");
+}
+function doRender(){
+  var q = document.getElementById("searchBox").value.toLowerCase();
+  var sel = document.getElementById("catBox").value;
+  var sort = document.getElementById("sortBox").value;
+  var list = document.getElementById("shopList");
+  var out = [];
+  for(var i=0;i<shops.length;i++){
+    var s = shops[i];
+    if(q && s.name.toLowerCase().indexOf(q)===-1 && s.area.toLowerCase().indexOf(q)===-1) continue;
+    if(curCat!=="All" && s.cat!==curCat) continue;
+    if(sel!=="All" && s.cat!==sel) continue;
+    if(favOnly && favs.indexOf(s.name)===-1) continue;
+    out.push(s);
+  }
+  if(sort==="rating") out.sort(function(a,b){ return parseFloat(b.rating)-parseFloat(a.rating); });
+  if(sort==="name") out.sort(function(a,b){ return a.name.localeCompare(b.name); });
+  document.getElementById("totalCount").textContent = "Total: " + shops.length + " | Showing: " + out.length;
+  if(out.length===0){ list.innerHTML = "<p class='small'>No shops found.</p>"; return; }
+  var h = "";
+  for(var j=0;j<out.length;j++){
+    var sh = out[j];
+    var isFav = favs.indexOf(sh.name)!==-1;
+    var badge = parseFloat(sh.rating)>=4.6 ? " <span style='background:#FFD700;color:#000;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:900'>PREMIUM</span>" : " <span style='background:rgba(0,255,163,.2);color:#fff;font-size:10px;padding:3px 8px;border-radius:999px;font-weight:800'>VERIFIED</span>";
+    h += '<div class="shop"><b>' + sh.name + ' ⭐ ' + sh.rating + badge + '</b><p>' + sh.cat + ' • ' + sh.area + ' • ' + sh.phone + '</p>';
+    h += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><a class="btn call" href="tel:' + sh.phone + '">Call</a><a class="btn wa" href="https://wa.me/91' + sh.phone + '" target="_blank">WhatsApp</a><button class="btn fav" onclick="toggleFav(\'' + sh.name.replace(/\'/g,"") + '\')">' + (isFav ? "❤️ Favourited" : "🤍 Favourite") + '</button></div></div>';
+  }
+  list.innerHTML = h;
+}
+doRender();
+</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
