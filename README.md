@@ -1,4 +1,4 @@
-# Malegaon Local - Bazaar Finder
+# My City Business Finder App
 
 **Live Demo:** https://ammarahmed-star.github.io/Malegaon-Local/  
 **Platform:** Android + Web Showcase  
