@@ -1,6 +1,6 @@
 # My City Business Finder App
 
-**Live Demo:** https://ammarahmed-star.github.io/Malegaon-Local/  
+**Live Demo:** https://ammarahmed-star.github.io/My-City-Business-Finder-App/  
 **Platform:** Android + Web Showcase  
 **Theme:** Dark Premium - #0C0A14 + #10B981 Neon  
 **Developer:** Ammar Ahmed
