@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My-City-Business-Finder-App</title>
+<title>My City Business Finder App — Local Business Finder</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 *{box-sizing:border-box}
@@ -37,19 +58,19 @@ input::placeholder{color:#555}
 </head>
 <body>
 <div class="bg"></div>
-<div class="nav"><div class="logo">📍 My-City-Business-Finder-App <span>Local</span></div><div class="badge">LIVE • BLACK</div></div>
-<div class="hero"><h1>My-City-Business-Finder-App<br><span>Finder</span></h1><p>Local business finder — Kirana, Medical, Mobile Repair — Find shops near you in Malegaon.</p><p class="small" id="totalCount" style="color:#888">Total Shops: 8</p></div>
+<div class="nav"><div class="logo">📍 My City <span>Business Finder</span></div><div class="badge">LIVE • BLACK</div></div>
+<div class="hero"><h1>My City Business Finder App<br><span>Bazaar Finder</span></h1><p>Local business finder — Kirana, Medical, Mobile Repair — Find shops near you in your city.</p><p class="small" id="totalCount" style="color:#888">Total Shops: 8</p></div>
 <div class="wrap">
 <div class="glass">
 <div class="tabs"><button class="tab active" id="tabShops" type="button">🏪 Shops</button><button class="tab" id="tabBusiness" type="button">➕ Add Business</button><button class="tab" id="tabTech" type="button">💻 Technology</button></div>
 <div id="panel-shops" style="margin-top:14px">
-<h3 style="margin:0;color:#fff">Shops</h3><p class="small">Find local shops in Malegaon.</p>
+<h3 style="margin:0;color:#fff">Shops</h3><p class="small">Find local shops in your city.</p>
 <div class="controls"><input id="searchInput" placeholder="Search shop or area"><select id="catSelect"><option value="All">All Categories</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option></select></div>
-<div id="chipBox"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button></div>
+<div id="chipBox"><button class="chip on" data-cat="All" type="button">All</button><button class="chip" data-cat="Kirana" type="button">Kirana</button><button class="chip" data-cat="Medical" type="button">Medical</button><button class="chip" data-cat="Mobile Repair" type="button">Mobile Repair</button><button class="chip" data-cat="Electrician" type="button">Electrician</button><button class="chip" data-cat="Plumber" type="button">Plumber</button></div>
 <div class="grid" id="shopList" style="margin-top:12px"></div>
 </div>
 <div id="panel-business" style="display:none;margin-top:14px">
-<h3 style="margin:0;color:#fff">Add Business</h3><p class="small">Add your shop to Malegaon Local directory.</p>
+<h3 style="margin:0;color:#fff">Add Business</h3><p class="small">Add your business to My City Business Finder App directory.</p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
 <div><label class="input-label">BUSINESS NAME *</label><input id="bName" placeholder="e.g. Altaf Kirana Store" style="width:100%"></div>
 <div><label class="input-label">CATEGORY *</label><select id="bCat" style="width:100%"><option value="">Select Category</option><option>Kirana</option><option>Medical</option><option>Mobile Repair</option><option>Electrician</option><option>Plumber</option><option>Tailor</option><option>Restaurants</option></select></div>
@@ -58,7 +79,7 @@ input::placeholder{color:#555}
 </div>
 <div class="controls" style="margin-top:18px"><button class="btn call" id="addBtn" type="button" style="padding:13px 26px">➕ Add Business</button><span id="addMsg" style="font-size:13px;font-weight:700;margin-left:10px;color:#fff"></span></div>
 </div>
-<div id="panel-tech" style="display:none;margin-top:14px"><h3 style="margin:0;color:#fff">About</h3><p class="small">Malegaon Local — Built with Firebase, Black UI, and local data.</p></div>
+<div id="panel-tech" style="display:none;margin-top:14px"><h3 style="margin:0;color:#fff">About</h3><p class="small">My City Business Finder App — Built with HTML, CSS, JavaScript — Black Premium UI, and local data.</p></div>
 </div>
 </div>
 <div class="toast" id="toast">Done</div>
@@ -97,8 +118,8 @@ document.getElementById("tabShops").addEventListener("click",function(){switchTa
 document.getElementById("tabBusiness").addEventListener("click",function(){switchTab("business")});
 document.getElementById("tabTech").addEventListener("click",function(){switchTab("tech")});
 document.getElementById("searchInput").addEventListener("input",render);
-document.getElementById("catSelect").addEventListener("change",render);
-document.querySelectorAll("#chipBox .chip").forEach(function(ch){ch.addEventListener("click",function(){curCat=ch.getAttribute("data-cat");document.querySelectorAll("#chipBox .chip").forEach(function(c){c.classList.remove("on")});ch.classList.add("on");render();})});
+document.getElementById("catSelect").addEventListener("change",function(){curCat=this.value;document.querySelectorAll("#chipBox .chip").forEach(function(c){c.classList.toggle("on",c.getAttribute("data-cat")===curCat)});render();});
+document.querySelectorAll("#chipBox .chip").forEach(function(ch){ch.addEventListener("click",function(){curCat=ch.getAttribute("data-cat");document.getElementById("catSelect").value=curCat;document.querySelectorAll("#chipBox .chip").forEach(function(c){c.classList.remove("on")});ch.classList.add("on");render();})});
 document.getElementById("addBtn").addEventListener("click",function(){
  var name=document.getElementById("bName").value.trim();
  var cat=document.getElementById("bCat").value.trim();
@@ -112,5 +133,5 @@ document.getElementById("addBtn").addEventListener("click",function(){
 render();
 })();
 </script>
-</body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
